@@ -14,56 +14,56 @@ import {
   Calendar,
   X,
   Menu,
-} from "lucide-react"; // using lucide icons
+} from "lucide-react";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
-    { href: "/notes", label: "Notes", icon: <Book size={40} /> },
-    { href: "/textbooks", label: "Textbooks", icon: <BookOpen size={40} /> },
-    { href: "/papers", label: "Papers", icon: <FileText size={40} /> },
+    { href: "/notes", label: "Notes", icon: <Book size={28} /> },
+    { href: "/textbooks", label: "Textbooks", icon: <BookOpen size={28} /> },
+    { href: "/papers", label: "Papers", icon: <FileText size={28} /> },
     {
       href: "/syllabus",
       label: "Syllabus & Curriculum",
-      icon: <List size={40} />,
+      icon: <List size={28} />,
     },
-    { href: "/admissions", label: "New Admissions", icon: <UserPlus size={40} /> },
-    { href: "/minor", label: "Minor Courses", icon: <GraduationCap size={40} /> },
-    { href: "/about", label: "About Us", icon: <Info size={40} /> },
+    { href: "/admissions", label: "New Admissions", icon: <UserPlus size={28} /> },
+    { href: "/minor", label: "Minor Courses", icon: <GraduationCap size={28} /> },
+    { href: "/about", label: "About Us", icon: <Info size={28} /> },
     {
       href: "/challenge",
       label: "Challenge Courses",
-      icon: <Calendar size={40} />,
+      icon: <Calendar size={28} />,
     },
   ];
 
   return (
-    <nav className="bg-[#0d1325] text-white flex items-center justify-between px-6 py-8 shadow-md">
+    <nav className="bg-[#0d1325] text-white flex items-center justify-between px-12 py-8 shadow-md w-screen">
       {/* Logo + Title */}
-      <div className="flex items-center gap-2">
+      <Link href="/" className="flex items-center gap-2">
         <Image src="/ksulogo.png" alt="Logo" width={60} height={60} />
         <span className="font-bold text-cyan-400 text-3xl">KSU Student Assist Cell</span>
-      </div>
+      </Link>
 
       {/* Desktop Menu */}
-<div className="hidden md:flex gap-12">
-  {links.map((link, idx) => (
-    <Link
-      key={idx}
-      href={link.href}
-      className="group relative flex items-center text-white hover:text-cyan-400 transition-colors duration-300"
-    >
-      {/* Icon always visible */}
-      {link.icon}
+      <div className="hidden md:flex gap-12">
+        {links.map((link, idx) => (
+          <Link
+            key={idx}
+            href={link.href}
+            className="group relative flex items-center text-white hover:text-cyan-400 transition-colors duration-300"
+          >
+            {/* Icon always visible */}
+            {link.icon}
 
-      {/* Label appears only on hover */}
-      <span className="absolute left-1/2 -translate-x-1/2 top-full mt-2 px-2 py-1 rounded-md bg-gray-800 text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
-        {link.label}
-      </span>
-    </Link>
-  ))}
-</div>
+            {/* Label appears only on hover */}
+            <span className="absolute left-1/2 -translate-x-1/2 top-full mt-2 px-2 py-1 rounded-md bg-gray-800 text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+              {link.label}
+            </span>
+          </Link>
+        ))}
+      </div>
 
 
       {/* Mobile Menu Button */}
