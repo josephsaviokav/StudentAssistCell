@@ -142,70 +142,70 @@ export default function MinorPage() {
   };
 
   // Sidebar configuration
-  const sidebarButtons: SidebarButtonType[] = [
-    {
-      id: 'general-info',
-      title: 'General Info',
-      onClick: () => setOpenModal("general"),
-      icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#3b82f6" className="size-6">
-          <path d="M4.5 5.25A2.25 2.25 0 0 1 6.75 3h10.5A2.25 2.25 0 0 1 19.5 5.25v13.5a.75.75 0 0 1-1.2.6l-1.8-1.35-1.8 1.35a.75.75 0 0 1-.9 0L12 18l-1.8 1.35a.75.75 0 0 1-.9 0L7.5 18l-1.8 1.35a.75.75 0 0 1-1.2-.6V5.25Z" />
-        </svg>
-      ),
-    },
-    {
-      id: 'overview',
-      title: 'Overview',
-      onClick: () => scrollTo("overview"),
-      icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#3b82f6" className="size-6">
-          <path d="M12 6.75c-1.768-1.228-3.88-1.5-6-.75a.75.75 0 0 0-.5.71v9.03a.75.75 0 0 0 1.01.71c1.86-.62 3.71-.42 5.49.59.47.27 1.03.27 1.5 0 1.78-1.01 3.63-1.21 5.49-.59a.75.75 0 0 0 1.01-.71V6.71a.75.75 0 0 0-.5-.71c-2.12-.75-4.23-.48-6 .75Z" />
-        </svg>
-      ),
-    },
-    {
-      id: 'credits',
-      title: 'Credits',
-      onClick: () => scrollTo("credits"),
-      icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#3b82f6" className="size-6">
-          <path d="M19.5 3.75h-9A2.25 2.25 0 0 0 8.25 6v12A2.25 2.25 0 0 0 10.5 20.25h9A2.25 2.25 0 0 0 21.75 18V6A2.25 2.25 0 0 0 19.5 3.75Z" />
-          <path d="M3.75 6.75A.75.75 0 0 1 4.5 6h3a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1-.75-.75Zm0 3A.75.75 0 0 1 4.5 9h3a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1-.75-.75Z" />
-        </svg>
-      ),
-    },
-    {
-      id: 'departments',
-      title: 'Departments',
-      onClick: () => scrollTo("departments"),
-      icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#3b82f6" className="size-6">
-          <path d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" />
-        </svg>
-      ),
-    },
-    {
-      id: 'allotment',
-      title: 'Allotment',
-      onClick: () => scrollTo("allotment"),
-      icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#3b82f6" className="size-6">
-          <path d="M15.75 8.25a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
-          <path d="M1.5 20.25a9 9 0 1 1 21 0v.75H1.5v-.75Z" />
-        </svg>
-      ),
-    },
-    {
-      id: 'home',
-      title: 'Home',
-      onClick: () => (window.location.href = "/"),
-      icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#3b82f6" className="size-6">
-          <path d="M12 3 1.5 9l10.5 6 9-5.143V18h1.5V9L12 3Z" />
-        </svg>
-      ),
-    },
-  ];
+  // const sidebarButtons: SidebarButtonType[] = [
+  //   {
+  //     id: 'general-info',
+  //     title: 'General Info',
+  //     onClick: () => setOpenModal("general"),
+  //     icon: (
+  //       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#3b82f6" className="size-6">
+  //         <path d="M4.5 5.25A2.25 2.25 0 0 1 6.75 3h10.5A2.25 2.25 0 0 1 19.5 5.25v13.5a.75.75 0 0 1-1.2.6l-1.8-1.35-1.8 1.35a.75.75 0 0 1-.9 0L12 18l-1.8 1.35a.75.75 0 0 1-.9 0L7.5 18l-1.8 1.35a.75.75 0 0 1-1.2-.6V5.25Z" />
+  //       </svg>
+  //     ),
+  //   },
+  //   {
+  //     id: 'overview',
+  //     title: 'Overview',
+  //     onClick: () => scrollTo("overview"),
+  //     icon: (
+  //       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#3b82f6" className="size-6">
+  //         <path d="M12 6.75c-1.768-1.228-3.88-1.5-6-.75a.75.75 0 0 0-.5.71v9.03a.75.75 0 0 0 1.01.71c1.86-.62 3.71-.42 5.49.59.47.27 1.03.27 1.5 0 1.78-1.01 3.63-1.21 5.49-.59a.75.75 0 0 0 1.01-.71V6.71a.75.75 0 0 0-.5-.71c-2.12-.75-4.23-.48-6 .75Z" />
+  //       </svg>
+  //     ),
+  //   },
+  //   {
+  //     id: 'credits',
+  //     title: 'Credits',
+  //     onClick: () => scrollTo("credits"),
+  //     icon: (
+  //       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#3b82f6" className="size-6">
+  //         <path d="M19.5 3.75h-9A2.25 2.25 0 0 0 8.25 6v12A2.25 2.25 0 0 0 10.5 20.25h9A2.25 2.25 0 0 0 21.75 18V6A2.25 2.25 0 0 0 19.5 3.75Z" />
+  //         <path d="M3.75 6.75A.75.75 0 0 1 4.5 6h3a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1-.75-.75Zm0 3A.75.75 0 0 1 4.5 9h3a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1-.75-.75Z" />
+  //       </svg>
+  //     ),
+  //   },
+  //   {
+  //     id: 'departments',
+  //     title: 'Departments',
+  //     onClick: () => scrollTo("departments"),
+  //     icon: (
+  //       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#3b82f6" className="size-6">
+  //         <path d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" />
+  //       </svg>
+  //     ),
+  //   },
+  //   {
+  //     id: 'allotment',
+  //     title: 'Allotment',
+  //     onClick: () => scrollTo("allotment"),
+  //     icon: (
+  //       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#3b82f6" className="size-6">
+  //         <path d="M15.75 8.25a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+  //         <path d="M1.5 20.25a9 9 0 1 1 21 0v.75H1.5v-.75Z" />
+  //       </svg>
+  //     ),
+  //   },
+  //   {
+  //     id: 'home',
+  //     title: 'Home',
+  //     onClick: () => (window.location.href = "/"),
+  //     icon: (
+  //       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#3b82f6" className="size-6">
+  //         <path d="M12 3 1.5 9l10.5 6 9-5.143V18h1.5V9L12 3Z" />
+  //       </svg>
+  //     ),
+  //   },
+  // ];
 
   return (
     <div className="relative min-h-screen overflow-x-hidden bg-gradient-to-b from-indigo-950 via-slate-900 to-slate-950 text-slate-100">
@@ -594,7 +594,7 @@ export default function MinorPage() {
       </main>
 
       {/* Floating sidebar */}
-      <Sidebar buttons={sidebarButtons} />
+      {/* <Sidebar buttons={sidebarButtons} /> */}
 
       {/* Modal instances */}
       <Modal
